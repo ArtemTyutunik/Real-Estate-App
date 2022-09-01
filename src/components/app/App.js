@@ -1,24 +1,32 @@
-import logo from '../../logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import {ChakraProvider, Box, theme, Container, Tabs, TabList, Tab, TabPanels, TabPanel} from '@chakra-ui/react';
+import Header from "../header";
+import ForRentPage from "../pages/forRentPage";
+import ForBuyPage from "../pages/forBuyPage";
+import {getAllForRentProperties} from "../../service/service";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider theme={theme}>
+      <Container maxW='1250px' >
+        <Header/>
+          <Tabs size='md' variant='enclosed'>
+              <TabList key={'tab-list'}>
+                  <Tab key={'for-rent-tab'}>For rent</Tab>
+                  <Tab key={'for-sale-tab'}>For sale</Tab>
+              </TabList>
+              <TabPanels>
+                  <TabPanel key={'for-rent-component'}>
+                      <ForRentPage/>
+                  </TabPanel>
+                  <TabPanel key={'for-sale-component'}>
+                     <ForBuyPage/>
+                  </TabPanel>
+              </TabPanels>
+          </Tabs>
+      </Container>
+    </ChakraProvider>
   );
 }
 
