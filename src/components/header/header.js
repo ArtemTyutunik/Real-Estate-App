@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box,Flex,HStack} from "@chakra-ui/react";
 import {Link as RouterLink} from 'react-router-dom'
+import ForRentPage from "../pages/forRentPage";
 
 const NavBar = () => {
     return (
@@ -8,10 +9,10 @@ const NavBar = () => {
             <RouterLink to={'/search'}>
                 Search
             </RouterLink>
-            <RouterLink to={'/search'}>
+            <RouterLink to={'/sale'}>
                 Buy Property
             </RouterLink>
-            <RouterLink to={'/search'}>
+            <RouterLink to={'/rent'} element = {<ForRentPage/>}>
                 Rent Property
             </RouterLink>
         </HStack>

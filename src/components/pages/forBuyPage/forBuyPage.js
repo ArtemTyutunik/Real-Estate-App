@@ -1,8 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {fetchAllForSaleProperties} from "../../../store/thunks";
+import {isDataEmpty} from "../../../utilities";
+import ItemList from "../../item-list";
+import Loader from "../../Loader/loader";
 
-function ForBuyPage(props) {
+function ForBuyPage() {
+    const dispatch = useDispatch()
+    const {saleItems, saleItemsStatusLoading} = useSelector(state => state.productReducer);
+
+    useEffect(() => {
+        if (saleItemsStatusLoading === 'idle'){
+            dispatch(fetchAllForSaleProperties())
+        }
+    }, [saleItemsStatusLoading,dispatch])
+
     return (
-        <div>For buy page</div>
+        <>
+            {
+                saleItemsStatusLoading === 'loading' || isDataEmpty(saleItems)? <Loader/> :
+                    <ItemList data={saleItems}/>
+            }
+        </>
+
     );
 }
 
