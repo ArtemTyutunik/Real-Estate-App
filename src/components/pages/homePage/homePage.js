@@ -30,8 +30,8 @@ function HomePage() {
         (
             <>
                 <h2 className={styles.title}>Your recommendations</h2>
-                <CenterMode data={rentItems} title = 'Renting recommendations'/>
-                <CenterMode data={saleItems} title = 'Saling recommendations'/>
+                <CenterMode data={rentItems} title = 'Renting recommendations' purpose = 'rent'/>
+                <CenterMode data={saleItems} title = 'Saling recommendations' purpose = 'sale'/>
             </>
         );
 

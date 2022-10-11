@@ -10,6 +10,7 @@ const  Routers = ()  => {
         <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path={'/home'} element={<HomePage/>}/>
+            <Route path={'/home/:purpose/:externalID'} element={<ItemDetailPage/>}/>
             <Route path = "/sale" element={<ForBuyPage/>}/>
             <Route path = "/rent" element={<ForRentPage/>}/>
             <Route path = 'rent/:externalID' element={<ItemDetailPage/>}/>

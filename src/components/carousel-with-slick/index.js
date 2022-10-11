@@ -2,6 +2,7 @@ import "./slick-theme.css";
 import './carousel-slick.css';
 import Slider from "react-slick";
 import RecommendCard from "../recommendCard/recommend card";
+import {Link as BrowserLink} from 'react-router-dom'
 
 export default function CenterMode(props)  {
     const [renderData] = props.data
@@ -16,14 +17,16 @@ export default function CenterMode(props)  {
 
     const filteredRenderData = renderData?.hits.filter(item => item.product === 'hot')
 
-        return (
-            <div>
-                <h2 className="title">{props.title}</h2>
-                <Slider {...settings}>
-                    {
-                        filteredRenderData.map(card => <RecommendCard key = {card.externalID} item={card}/>)
-                    }
-                </Slider>
-            </div>
-        );
+    return (
+        <div>
+            <h2 className="title">{props.title}</h2>
+            <Slider {...settings}>
+                {
+                    filteredRenderData.map(card => <BrowserLink to={`rent/${card.externalID}`} key = {card.externalID}>
+                        <RecommendCard item={card}/>
+                    </BrowserLink>)
+                }
+            </Slider>
+        </div>
+    );
 }
