@@ -1,10 +1,10 @@
 import "./slick-theme.css";
 import './carousel-slick.css';
 import Slider from "react-slick";
-import RecommendCard from "../recommendCard/recommend card";
+import RecommendCard from "../../recommendCard/recommend card";
 import {Link as BrowserLink} from 'react-router-dom'
 
-export default function CenterMode(props)  {
+export default function HomePageCarousel(props)  {
     const [renderData] = props.data
 
     const settings = {

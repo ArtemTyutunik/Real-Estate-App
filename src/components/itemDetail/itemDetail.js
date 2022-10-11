@@ -3,8 +3,7 @@ import styles from './itemDetails.module.css'
 import {BsGridFill, FaBath, FaBed, GoUnverified, GoVerified} from "react-icons/all";
 import {Avatar} from "@chakra-ui/react";
 import millify from "millify";
-import ImageSlider from "../carousel/carousel";
-
+import ImageSlider from "../carousels/itemDetailCarousel/carousel";
 function ItemDetail({data}) {
     const [renderItem] = data;
 
