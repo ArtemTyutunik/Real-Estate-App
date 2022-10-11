@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchAllForSaleProperties} from "../../../store/thunks";
 import {isDataEmpty} from "../../../utilities";
 import ItemList from "../../item-list";
-import Loader from "../../Loader/loader";
+import Loader from "../../loader/loader";
 
 function ForBuyPage() {
     const dispatch = useDispatch()

@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchAllForRentProperties} from "../../../store/thunks";
 import {isDataEmpty} from "../../../utilities";
 import {selectProductReducer} from "../../../store/slices/productSlice";
-import Loader from "../../Loader/loader";
+import Loader from "../../loader/loader";
 import ItemList from "../../item-list";
 
 function ForRentPage() {

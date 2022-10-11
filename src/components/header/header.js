@@ -1,32 +1,39 @@
 import React from 'react';
-import {Box,Flex,HStack} from "@chakra-ui/react";
 import {Link as RouterLink} from 'react-router-dom'
 import ForRentPage from "../pages/forRentPage";
+import styles from './header.module.css';
+
+const {
+    header_navbar,
+    navbar__item,
+    header,
+    header_logo
+} = styles
 
 const NavBar = () => {
     return (
-        <HStack spacing={'15px'}>
-            <RouterLink to={'/search'}>
+        <div className={header_navbar}>
+            <RouterLink className={navbar__item} to={'/search'}>
                 Search
             </RouterLink>
-            <RouterLink to={'/sale'}>
+            <RouterLink className={navbar__item} to={'/sale'}>
                 Buy Property
             </RouterLink>
-            <RouterLink to={'/rent'} element = {<ForRentPage/>}>
+            <RouterLink className={navbar__item} to={'/rent'} element = {<ForRentPage/>}>
                 Rent Property
             </RouterLink>
-        </HStack>
+        </div>
     )
 }
 
 function Header() {
     return (
-    <Flex w={'100%'} justifyContent = {'space-between'}>
-        <Box fontSize='3xl' color='blue.400' fontWeight='bold'>
+    <div className={header}>
+        <div className={header_logo}>
             <RouterLink to={'/'}>Realtor</RouterLink>
-        </Box>
+        </div>
         <NavBar/>
-    </Flex>
+    </div>
     );
 }
 

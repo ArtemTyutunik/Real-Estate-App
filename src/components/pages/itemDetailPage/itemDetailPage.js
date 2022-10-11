@@ -4,7 +4,7 @@ import {fetchForItemDetail} from "../../../store/thunks";
 import {useDispatch, useSelector} from "react-redux";
 import ItemDetail from "../../itemDetail/itemDetail";
 import {selectProductDetailReducer} from "../../../store/slices/productDetailSlice";
-import Loader from "../../Loader/loader";
+import Loader from "../../loader/loader";
 
 function ItemDetailPage() {
     const {externalID} = useParams();

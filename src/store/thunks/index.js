@@ -1,6 +1,9 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import * as API from "../../service";
 
+
+//todo add async funcs
+
 export const fetchAllForSaleProperties = createAsyncThunk(
     'productSlice/fetchAllForSaleProperties',
     async () => {

@@ -1,0 +1,137 @@
+
+.recomendCard_inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.recomendCard_inner__img{
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.recomendCard_inner__description{
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    justify-content: space-between;
+    width: 100%;
+    color: #4299e1;
+}
+
+.description_price{
+
+}
+
+
+.detail_inner{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 35px auto 35px;
+
+}
+
+
+
+.properties_group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.properties_group_description {
+    display: flex;
+    align-items: center;
+}
+
+.description_verified{
+    width: 16px;
+    height: 16px;
+    color: #48BB78;
+    margin-right: 12px;
+}
+
+.description_price {
+    font-weight: bold;
+}
+
+.properties_group_info {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    justify-content: space-between;
+    width: 250px;
+    color: #4299e1;
+}
+
+.detail_inner__title{
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.unverified{
+    color: red;
+}
+
+.detail_inner__infoGroup{
+    display: flex;
+    vertical-align: center;
+    flex-direction: column;
+}
+
+.detailGroup__description{
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.detail__inner__features{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.features__item{
+    width: 33%;
+    margin-right: 35px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.item__value{
+    font-weight: 700;
+}
+
+.detail_inner__facilities{
+    display: flex;
+    flex-direction: column;
+}
+
+.facilities__title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.facilities__inner{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.facilities__item{
+    color: #4299e1;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    background: rgba(159, 155, 155, 0.2);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
