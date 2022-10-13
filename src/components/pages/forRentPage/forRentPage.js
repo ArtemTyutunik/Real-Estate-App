@@ -1,20 +1,11 @@
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {fetchAllForRentProperties} from "../../../store/thunks";
+import React from 'react';
 import {isDataEmpty} from "../../../utilities";
-import {selectProductReducer} from "../../../store/slices/productSlice";
-import Loader from "../../Loader/loader";
+import Loader from "../../loader/loader";
 import ItemList from "../../item-list";
+import useFetchRentData from "../../../hooks/useFetchRentData";
 
 function ForRentPage() {
-    const dispatch = useDispatch();
-    const {rentItems, rentItemsStatusLoading} = useSelector(selectProductReducer);
-
-    useEffect(() => {
-        if (rentItemsStatusLoading === 'idle') {
-            dispatch(fetchAllForRentProperties());
-        }
-    },[dispatch,rentItemsStatusLoading])
+    const {rentItems, rentItemsStatusLoading} = useFetchRentData();
 
     return (
         <>

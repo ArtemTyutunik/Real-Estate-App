@@ -4,7 +4,7 @@ const baseUrl  = 'https://bayut.p.rapidapi.com';
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '1a9cfe59c2msh1ca8ebea9e1c574p1f1a13jsn242061e7997b',
+        'X-RapidAPI-Key': '0b7384a16cmshc2d06dabc9b9d4ap174624jsnc83356d3f643',
         'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
     }
 };
