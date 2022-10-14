@@ -3,7 +3,7 @@ import {selectProductReducer} from "../store/slices/productSlice";
 import {useEffect} from "react";
 import {fetchAllForSaleProperties} from "../store/thunks";
 
-function useFetchRentData() {
+function useFetchSaleData(){
     const dispatch = useDispatch();
     const {saleItems,saleItemsStatusLoading} = useSelector(selectProductReducer);
 
@@ -19,4 +19,4 @@ function useFetchRentData() {
     }
 }
 
-export default useFetchRentData;
+export default useFetchSaleData;

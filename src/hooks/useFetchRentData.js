@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {selectProductReducer} from "../store/slices/productSlice";
 import {fetchAllForRentProperties} from "../store/thunks";
 
-function useFetchRentData() {
+const useFetchRentData = ()  => {
     const dispatch = useDispatch();
     const {rentItems,rentItemsStatusLoading} = useSelector(selectProductReducer);
 

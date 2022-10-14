@@ -17,7 +17,7 @@ const NavBar = () => {
                 Search
             </RouterLink>
             <RouterLink className={navbar__item} to={'/sale'}>
-                Buy Property
+                Sale Property
             </RouterLink>
             <RouterLink className={navbar__item} to={'/rent'} element = {<ForRentPage/>}>
                 Rent Property
