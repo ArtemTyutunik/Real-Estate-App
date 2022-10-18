@@ -1,5 +1,5 @@
 import React from 'react';
-import {isDataEmpty} from "../../../utilities";
+import {isDataEmpty} from "../../../utils";
 import Loader from "../../loader/loader";
 import ItemList from "../../item-list";
 import useFetchRentData from "../../../hooks/useFetchRentData";

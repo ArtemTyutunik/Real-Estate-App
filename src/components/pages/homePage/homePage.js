@@ -1,5 +1,5 @@
 import Loader from "../../loader/loader";
-import {isDataEmpty} from "../../../utilities";
+import {isDataEmpty} from "../../../utils";
 import HomePageCarousel from "../../carousels/homePageCarousel";
 
 import styles from './homePage.module.css'
