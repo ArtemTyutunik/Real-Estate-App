@@ -1,10 +1,10 @@
 import React from 'react';
-import {isDataEmpty} from "../../../utilities";
+import {isDataEmpty} from "../../../utils";
 import Loader from "../../loader/loader";
 import ItemList from "../../item-list";
 import useFetchRentData from "../../../hooks/useFetchRentData";
 
-function ForRentPage() {
+function RentPage() {
     const {rentItems, rentItemsStatusLoading} = useFetchRentData();
 
     return (
@@ -18,4 +18,4 @@ function ForRentPage() {
     );
 }
 
-export default ForRentPage;
+export default RentPage;

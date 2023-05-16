@@ -1,10 +1,10 @@
 import React from 'react';
-import {isDataEmpty} from "../../../utilities";
+import {isDataEmpty} from "../../../utils";
 import ItemList from "../../item-list";
 import Loader from "../../loader/loader";
 import useFetchSaleData from "../../../hooks/useFetchSaleData";
 
-function ForBuyPage() {
+function SalePage() {
 
     const {saleItems, saleItemsStatusLoading} = useFetchSaleData();
 
@@ -19,4 +19,4 @@ function ForBuyPage() {
     );
 }
 
-export default ForBuyPage;
+export default SalePage;

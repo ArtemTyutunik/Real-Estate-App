@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link as RouterLink} from 'react-router-dom'
-import ForRentPage from "../pages/forRentPage";
+import ForRentPage from "../pages/rentPage";
 import styles from './header.module.css';
 
 const {
@@ -13,9 +13,6 @@ const {
 const NavBar = () => {
     return (
         <div className={header_navbar}>
-            <RouterLink className={navbar__item} to={'/search'}>
-                Search
-            </RouterLink>
             <RouterLink className={navbar__item} to={'/sale'}>
                 Buy Property
             </RouterLink>
