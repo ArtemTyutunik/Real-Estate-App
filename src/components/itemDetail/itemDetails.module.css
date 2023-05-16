@@ -7,13 +7,11 @@
 
 }
 
-
-
 .properties_group{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .properties_group_description {

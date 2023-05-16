@@ -81,7 +81,7 @@
 }
 
 .slick-slide:nth-child(3n){
-    padding: 0;
+    padding-right: 10px;
 }
 [dir='rtl'] .slick-slide
 {

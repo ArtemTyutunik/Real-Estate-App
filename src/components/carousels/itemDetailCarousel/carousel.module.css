@@ -15,14 +15,16 @@
     cursor: pointer;
 }
 .arrow_color{
-    color: #ffffff;
+    color: #4399e1;
 }
 .rightArrowStyles {
-    right: 32px;
+    right: -50px;
+    color: #4399e1;
 }
 
 .leftArrowStyles {
-    left: 32px;
+    left: -50px;
+    color: #4399e1;
 }
 
 .dotsContainerStyles {
@@ -31,9 +33,10 @@
 }
 
 .dotStyle {
-    margin: 0 3px;
+    margin: 7px;
     cursor: pointer;
-    font-size: 20px;
+    color: #4399e1;
+    font-size: 15px;
 }
 
 .slideStylesWidthBackground {
@@ -42,5 +45,8 @@
     border-radius: 10px;
     background-size: cover;
     background-position: center;
+}
 
+.activeDot {
+    font-size: 20px;
 }

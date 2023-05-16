@@ -7,7 +7,7 @@ import {Link as BrowserLink} from "react-router-dom";
 
 const ItemList = ({data})=> {
         const [rent] = data
-    const items = rent.hits.map((renderItem) =><ListItem key = {renderItem.title} renderItem = {renderItem}/>)
+    const items = rent.hits.map((renderItem) =><ListItem key = {renderItem.id} renderItem = {renderItem}/>)
     return <div className={styles.inner}>
         {items}
     </div>
