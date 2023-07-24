@@ -3,7 +3,7 @@ import millify from "millify";
 import styles from './itemList.module.css'
 import {Avatar, Image} from "@chakra-ui/react";
 import {BsGridFill, FaBath, FaBed, GoVerified} from "react-icons/all";
-import {Link as BrowserLink} from "react-router-dom";
+import Link from "next/link";
 
 const ItemList = ({data})=> {
         const [rent] = data
@@ -42,9 +42,9 @@ const ListItem = ({renderItem} )=> {
 
 
     return <div className = {item}>
-        <BrowserLink to={`${externalID}`}>
+        <Link href={`/${externalID}`}>
             <Image className={image} src={coverPhoto.url}/>
-        </BrowserLink>
+        </Link>
         <div className={properties_group}>
             <div className={properties_group_description}>
                 <div className={description_verified}>

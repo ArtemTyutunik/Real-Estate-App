@@ -1,21 +1,20 @@
-import Loader from "../../loader/loader";
-import {isDataEmpty} from "../../../utils";
-import HomePageCarousel from "../../carousels/homePageCarousel";
+'use client'
+import Loader from "../../src/components/loader/loader";
+import {isDataEmpty} from "../../src/utils";
+import HomePageCarousel from "../../src/components/carousels/homePageCarousel";
 
 import styles from './homePage.module.css'
-import useFetchSaleData from "../../../hooks/useFetchSaleData";
-import useFetchRentData from "../../../hooks/useFetchRentData";
+import useFetchSaleData from "../../src/hooks/useFetchSaleData";
+import useFetchRentData from "../../src/hooks/useFetchRentData";
 
-function HomePage() {
+function Page() {
     const {rentItems,rentItemsStatusLoading} = useFetchRentData();
     const {saleItems,saleItemsStatusLoading} = useFetchSaleData();
 
     const checkLoading = (rentItemsStatusLoading === 'loading' || isDataEmpty(rentItems)) ||
                          (saleItemsStatusLoading === 'loading' || isDataEmpty(saleItems))
 
-    const showContent = checkLoading ? <Loader/> :
-
-        (
+    const showContent = checkLoading ? <Loader/> : (
             <>
                 <h2 className={styles.title}>Your recommendations</h2>
                 <HomePageCarousel data={rentItems} title = 'Renting recommendations' purpose = 'rent'/>
@@ -30,4 +29,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default Page;

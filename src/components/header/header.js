@@ -1,6 +1,6 @@
+'use client'
 import React from 'react';
-import {Link as RouterLink} from 'react-router-dom'
-import ForRentPage from "../pages/rentPage";
+import Link from 'next/link'
 import styles from './header.module.css';
 
 const {
@@ -13,12 +13,12 @@ const {
 const NavBar = () => {
     return (
         <div className={header_navbar}>
-            <RouterLink className={navbar__item} to={'/sale'}>
+            <Link className={navbar__item} href={'/sale'}>
                 Buy Property
-            </RouterLink>
-            <RouterLink className={navbar__item} to={'/rent'} element = {<ForRentPage/>}>
+            </Link>
+            <Link className={navbar__item} href={'/rent'}>
                 Rent Property
-            </RouterLink>
+            </Link>
         </div>
     )
 }
@@ -27,7 +27,7 @@ function Header() {
     return (
     <div className={header}>
         <div className={header_logo}>
-            <RouterLink to={'/'}>Realtor</RouterLink>
+            <Link href={'/home'}>Realtor</Link>
         </div>
         <NavBar/>
     </div>

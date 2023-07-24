@@ -1,13 +1,13 @@
+'use client'
 import React, {useEffect} from 'react';
-import {useParams} from "react-router-dom";
-import {fetchForItemDetail} from "../../../store/thunks";
+import {fetchForItemDetail} from "../../src/store/thunks";
 import {useDispatch, useSelector} from "react-redux";
-import ItemDetail from "../../itemDetail/itemDetail";
-import {selectProductDetailReducer} from "../../../store/slices/productDetailSlice";
-import Loader from "../../loader/loader";
+import ItemDetail from "../../src/components/itemDetail/itemDetail";
+import {selectProductDetailReducer} from "../../src/store/slices/productDetailSlice";
+import Loader from "../../src/components/loader/loader";
 
-function ItemDetailPage() {
-    const {externalID} = useParams();
+function Page({params}) {
+    const {externalID} = params;
     const dispatch = useDispatch();
     const {ItemDetail: itemDetailData, statusLoading,error}= useSelector(selectProductDetailReducer);
 
@@ -29,4 +29,4 @@ function ItemDetailPage() {
     );
 }
 
-export default ItemDetailPage;
+export default Page;

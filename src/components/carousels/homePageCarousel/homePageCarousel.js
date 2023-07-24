@@ -1,5 +1,6 @@
+'use client'
 import Slider from "react-slick";
-import {Link as BrowserLink} from 'react-router-dom'
+import Link from 'next/link'
 import RecommendCard from "../../recommendCard/recommend card";
 import useWindowSize from "../../../hooks/useWindowSize";
 import './carousel-slick.css';
@@ -26,9 +27,11 @@ export default function HomePageCarousel(props)  {
             <h2 className="title">{props.title}</h2>
             <Slider {...settings}>
                 {
-                    filteredRenderData.map(card => <BrowserLink to={`rent/${card.externalID}`} key = {card.externalID}>
+                    filteredRenderData.map(card => <Link href={`${card.externalID}`}
+                                                         key = {card.externalID}
+                         >
                         <RecommendCard item={card}/>
-                    </BrowserLink>)
+                    </Link>)
                 }
             </Slider>
         </div>

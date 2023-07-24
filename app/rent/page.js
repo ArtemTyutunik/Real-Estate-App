@@ -1,8 +1,9 @@
+'use client'
 import React from 'react';
-import {isDataEmpty} from "../../../utils";
-import Loader from "../../loader/loader";
-import ItemList from "../../item-list";
-import useFetchRentData from "../../../hooks/useFetchRentData";
+import {isDataEmpty} from "../../src/utils";
+import Loader from "../../src/components/loader/loader";
+import ItemList from "../../src/components/item-list";
+import useFetchRentData from "../../src/hooks/useFetchRentData";
 
 function RentPage() {
     const {rentItems, rentItemsStatusLoading} = useFetchRentData();

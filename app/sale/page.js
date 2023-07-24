@@ -1,8 +1,9 @@
+'use client'
 import React from 'react';
-import {isDataEmpty} from "../../../utils";
-import ItemList from "../../item-list";
-import Loader from "../../loader/loader";
-import useFetchSaleData from "../../../hooks/useFetchSaleData";
+import {isDataEmpty} from "../../src/utils";
+import ItemList from "../../src/components/item-list";
+import Loader from "../../src/components/loader/loader";
+import useFetchSaleData from "../../src/hooks/useFetchSaleData";
 
 function SalePage() {
 
