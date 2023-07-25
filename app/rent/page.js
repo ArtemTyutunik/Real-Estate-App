@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import {isDataEmpty} from "../../src/utils";
-import Loader from "../../src/components/loader/loader";
+import Loading from "../loading";
 import ItemList from "../../src/components/item-list";
 import useFetchRentData from "../../src/hooks/useFetchRentData";
 
@@ -11,7 +11,7 @@ function RentPage() {
     return (
         <>
             {
-                rentItemsStatusLoading === 'loading' || isDataEmpty(rentItems)? <Loader/> :
+                rentItemsStatusLoading === 'loading' || isDataEmpty(rentItems)? <Loading/> :
                     <ItemList data={rentItems}/>
             }
         </>

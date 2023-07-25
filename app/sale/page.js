@@ -2,7 +2,7 @@
 import React from 'react';
 import {isDataEmpty} from "../../src/utils";
 import ItemList from "../../src/components/item-list";
-import Loader from "../../src/components/loader/loader";
+import Loading from "../loading";
 import useFetchSaleData from "../../src/hooks/useFetchSaleData";
 
 function SalePage() {
@@ -12,7 +12,7 @@ function SalePage() {
     return (
         <>
             {
-                saleItemsStatusLoading === 'loading' || isDataEmpty(saleItems)? <Loader/> :
+                saleItemsStatusLoading === 'loading' || isDataEmpty(saleItems)? <Loading/> :
                     <ItemList data={saleItems}/>
             }
         </>

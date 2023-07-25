@@ -19,8 +19,13 @@
     color: #4299e1;
 }
 
-.description_price{
-
+.description_avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 

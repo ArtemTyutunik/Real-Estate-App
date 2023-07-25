@@ -8,7 +8,8 @@ import "./slick-theme.css";
 
 
 export default function HomePageCarousel(props)  {
-    const [renderData] = props.data
+    const renderData = props.data
+
     const {width} = useWindowSize()
 
     const settings = {

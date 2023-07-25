@@ -1,7 +1,7 @@
+'use client'
 import React from 'react';
 import styles from './recomendCard.module.css'
 import {BsGridFill, FaBath, FaBed, GoUnverified, GoVerified} from "react-icons/all";
-import {Avatar} from "@chakra-ui/react";
 import millify from "millify";
 
 function RecommendCard({item}) {
@@ -21,8 +21,7 @@ function RecommendCard({item}) {
                                     {`${item.price} AED`}
                                 </div>
                             </div>
-                            <div>
-                                <Avatar size='sm' src= {item.agency.logo.url}></Avatar>
+                            <div className={styles.description_avatar} style={{backgroundImage: `url(${item.agency.logo.url})`}}>
                             </div>
                         </div>
                     </div>
